@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardviewgallery"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/shimmerlayoutitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                tools:srcCompat="@tools:sample/avatars" />
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+
+        <TextView
+            android:id="@+id/gallery_item_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shimmerlayoutitem" />
+
+        <ImageView
+            android:id="@+id/gallery_item_img_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gallery_item_author"
+            app:srcCompat="@drawable/like" />
+
+        <TextView
+            android:id="@+id/gallery_item_tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/gallery_item_img_like"
+            app:layout_constraintStart_toEndOf="@+id/gallery_item_img_like"
+            app:layout_constraintTop_toTopOf="@+id/gallery_item_img_like"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/gallery_item_img_well"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="TODO"
+            app:layout_constraintBottom_toBottomOf="@+id/gallery_item_tv_like"
+            app:layout_constraintStart_toEndOf="@+id/gallery_item_tv_like"
+            app:layout_constraintTop_toTopOf="@+id/gallery_item_tv_like"
+            app:srcCompat="@drawable/well" />
+
+        <TextView
+            android:id="@+id/gallery_item_tv_well"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="TextView"
+            app:layout_constraintBottom_toBottomOf="@+id/gallery_item_img_well"
+            app:layout_constraintStart_toEndOf="@+id/gallery_item_img_well"
+            app:layout_constraintTop_toTopOf="@+id/gallery_item_img_well" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
